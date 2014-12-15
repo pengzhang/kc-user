@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 
+import play.data.validation.Required;
 import play.db.jpa.Model;
 import play.libs.Codec;
 
@@ -15,11 +16,19 @@ import play.libs.Codec;
 
 @Entity
 public class Resource extends Model {
-
+	
+	@Required
 	public String resource;
+	@Required
 	public String domain;
-	public String appKey = Codec.UUID();
-	public String secureKey = Codec.UUID();
+	@Required
+	public String appkey = Codec.UUID();
+	@Required
+	public String securekey = Codec.UUID();
+	
+	public String toString(){
+		return resource;
+	}
 	
 	
 }

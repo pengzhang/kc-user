@@ -1,6 +1,20 @@
+Resource(res):
+    resource:       app
+    doamin:         test.com
+    appkey:         3edsa23r
+    securekey:      ewraer22  
+
+Role(rol):
+    role:           admin
+    resources:      
+                    - res
+
 User(bob):
     email:          bob@gmail.com
     password:       123
     fullname:       Bob
-    username:		Bob_username
     isAdmin:        true
+    status:         true
+    username:       bob
+    roles:
+                    - rol

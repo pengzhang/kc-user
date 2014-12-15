@@ -26,12 +26,12 @@
 <div class='row-fluid'>
     <div class='span12 box bordered-box purple-border' style='margin-bottom:0;'>
         <div class='box-header sea-blue-background'>
-            <div class='title'>&{'user.list'}</div>
+            <div class='title'>&{'resource.list'}</div>
         </div>
         <div class='box-content box-no-padding'>
-        #{crud.table fields:['email','username','fullname','address','status','isAdmin','registerDate','lastLoginDate']}
-        	#{crud.custom 'email'}
-        		<a href="@{Users.show(object.id)}">${object.email}</a>
+        #{crud.table fields:['resource','domain','appkey','securekey']}
+        	#{crud.custom 'resource'}
+        		<a href="@{Resources.show(object.id)}">${object.resource}</a>
         	#{/crud.custom}
         #{/crud.table}
         </div>
