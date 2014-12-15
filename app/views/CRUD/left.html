@@ -1,0 +1,88 @@
+<nav class='' id='main-nav'>
+	<div class='navigation'>
+	#{secure.check 'admin'}
+		<ul class='nav nav-stacked'>
+			<li class=''>
+			    <a class='dropdown-collapse' href='#'>
+			        <i class='icon-edit'></i>
+			        <span>&{'user.mgr'}</span>
+			        <i class='icon-angle-down angle-down'></i>
+			    </a>
+			    <ul class='nav nav-stacked'>
+			    	<li class=''>
+			            <a href='@{Users.list()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'user.list'}</span>
+			            </a>
+			        </li>
+			        <li class=''>
+			            <a href='@{Users.blank()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'user.add'}</span>
+			            </a>
+			        </li>
+			        
+			    </ul>
+			</li>
+			<li class=''>
+			    <a class='dropdown-collapse' href='#'>
+			        <i class='icon-edit'></i>
+			        <span>&{'resource.mgr'}</span>
+			        <i class='icon-angle-down angle-down'></i>
+			    </a>
+			    <ul class='nav nav-stacked'>
+			        <li class=''>
+			            <a href='@{Resources.list()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'resource.list'}</span>
+			            </a>
+			        </li>
+			        <li class=''>
+			            <a href='@{Resources.blank()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'resource.add'}</span>
+			            </a>
+			        </li>
+			        
+			    </ul>
+			</li>
+			<li class=''>
+			    <a class='dropdown-collapse' href='#'>
+			        <i class='icon-edit'></i>
+			        <span>&{'role.mgr'}</span>
+			        <i class='icon-angle-down angle-down'></i>
+			    </a>
+			    <ul class='nav nav-stacked'>
+			        <li class=''>
+			            <a href='@{Roles.list()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'role.list'}</span>
+			            </a>
+			        </li>
+			        <li class=''>
+			            <a href='@{Roles.blank()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'role.add'}</span>
+			            </a>
+			        </li>
+			    </ul>
+			</li>
+			<li class=''>
+			    <a class='dropdown-collapse' href=''>
+			        <i class='icon-edit'></i>
+			        <span>&{'online.mgr'}</span>
+			        <i class='icon-angle-down angle-down'></i>
+			    </a>
+			    <ul class='nav nav-stacked'>
+			        <li class=''>
+			            <a href='@{Onlines.list()}'>
+			                <i class='icon-caret-right'></i>
+			                <span>&{'online.list'}</span>
+			            </a>
+			        </li>
+			    </ul>
+			</li>
+		</ul>
+	#{/secure.check}
+	</div>
+</nav>

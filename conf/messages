@@ -1,3 +1,106 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+#Web Name
+web.name=卡车帮
+app.name=用户中心
+
+
+#Login Page
+login.title=登录
+email=电子邮箱
+password=密码
+rememberme=记住我
+login.submit=登录
+logout=退出
+
+#Left Nav
+user.mgr=用户管理
+user.list=用户列表
+user.add=添加用户
+resource.mgr=资源管理
+resource.list=资源列表
+resource.add=添加资源
+role.mgr=角色管理
+role.list=角色列表
+role.add=添加角色
+online.mgr=在线用户管理
+online.list=在线用户列表
+
+
+
+
+Roles=角色
+
+
+Users=用户
+User=用户
+username=用户名
+fullname=全名
+address=详细地址
+status=禁用状态
+isAdmin=是否管理员
+registerDate=注册日期
+lastLoginDate=最后登录时间
+roles=所属角色 
+
+
+
+
+Resources=资源
+
+
+
+crud.title=管理控制台
+crud.home=首页
+crud.blank=新建
+crud.index.title=Choose the object to edit
+crud.index.objectType=Object type
+crud.index.action=
+crud.index.add=添加
+crud.add=添加 &{%s}
+crud.list.title=&{%s}
+crud.list.size=%d &{%s}
+crud.list.totalSize=%d total
+crud.pagination.previous=« Previous
+crud.pagination.next=Next »
+crud.pagination.last=Last »»
+crud.pagination.first=«« First
+crud.show.title=编辑 &{%s}
+crud.save=保存
+crud.saveAndContinue=Save and continue editing
+crud.cancel=Cancel
+crud.hasErrors=Please correct errors
+crud.blank.title=添加 &{%s}
+crud.saveAndAddAnother=Save and create another
+crud.delete=删除 &{%s}
+crud.created=The &{%s} has been created
+crud.saved=The &{%s} has been saved
+crud.deleted=The &{%s} has been deleted
+crud.delete.error=Cannot delete this object
+crud.search=Search
+crud.none=(None)
+crud.selectValue=(Please select a value)
+
+crud.help.required=Required.
+crud.help.minlength=Min length is %d.
+crud.help.maxlength=Max length is %d.
+crud.help.email=Valid email address.
+crud.help.dateformat=&{%s} format.
+crud.help.numeric=Numeric.
+crud.help.min=Must be greater than %d.
+crud.help.future=In the future.
+crud.help.past=In the past.
+crud.help.after=After %s.
+crud.help.before=Before %s.
+crud.help.range=Between %d and %d
+
+
+secure.title=
+secure.username=Username:
+secure.password=Password:
+secure.remember=Remember me
+secure.signin=Sign in
+secure.error=Oops, unknown username or password.
+secure.logout=You have been logged out.

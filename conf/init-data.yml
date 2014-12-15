@@ -1,0 +1,6 @@
+User(bob):
+    email:          bob@gmail.com
+    password:       123
+    fullname:       Bob
+    username:		Bob_username
+    isAdmin:        true

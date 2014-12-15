@@ -1,0 +1,38 @@
+#{extends 'Secure/layout.html' /}
+
+<div class='controls'>
+      <div class='caret'></div>
+      <div class='form-wrapper'>
+        <h1 class='text-center'>&{'login.title'}</h1>
+        #{form @authenticate()}
+
+		#{if flash.error}
+			<p class="error">
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+          <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+              <div class='row-fluid'>
+                  <div class='span12 icon-over-input'>
+                      <input class="span12" id="username" name="username" placeholder="&{'email'}" type="text" value="${flash.username}" />
+                      <i class='icon-user muted'></i>
+                  </div>
+              </div>
+              <div class='row-fluid'>
+                  <div class='span12 icon-over-input'>
+                      <input class="span12" id="password" name="password" placeholder="&{'password'}" type="password" value="" />
+                      <i class='icon-lock muted'></i>
+                  </div>
+              </div>
+              <label class="checkbox" for="remember_me"><input id="remember" name="remember" type="checkbox" value="1" ${flash.remember ? 'checked="true"' : ''} />
+                  &{'rememberme'}
+              </label>
+              <button class="btn btn-block" name="button" type="submit">&{'login.submit'}</button>
+		#{/form}
+      </div>
+</div>

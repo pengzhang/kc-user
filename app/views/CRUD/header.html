@@ -1,0 +1,28 @@
+<header>
+    <div class='navbar'>
+        <div class='navbar-inner'>
+            <div class='container-fluid'>
+                <a class='brand' href='index.html'>
+                    <span class='hidden-phone'>&{'web.name'}-&{'app.name'}</span>
+                </a>
+                <ul class='nav pull-right'>
+                    <li class='dropdown dark user-menu'>
+                        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                            <!-- <img alt='Mila Kunis' height='23' src='/public/assets/images/avatar.jpg' width='23' /> -->
+                            <span class='user-name hidden-phone'>${session.username}</span>
+                            <b class='caret'></b>
+                        </a>
+                        <ul class='dropdown-menu'>
+                            <li>
+                                <a href='/logout'>
+                                    <i class='icon-signout'></i>
+                                    &{'logout'}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
