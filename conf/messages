@@ -57,6 +57,13 @@ domain=域名
 appkey=应用Key
 securekey=应用秘钥
 
+Onlines=在线用户
+Online=在线用户
+accesstoken=访问令牌
+appkey=应用Key
+securekey=应用秘钥
+expiretime=失效时间
+
 
 
 crud.title=管理控制台
@@ -112,3 +119,8 @@ secure.remember=记住我
 secure.signin=登录
 secure.error=用户名或者密码错误.
 secure.logout=您已成功退出.
+
+
+auth.error.noapp=没有此应用
+auth.error.noauth=无权登陆此应用
+auth.error.nologin=用户没有登陆

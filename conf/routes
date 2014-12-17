@@ -4,6 +4,8 @@
 
 # Home page
 GET     /                                       Application.index
+GET		/auth/?					 				Auth.auth
+GET		/auth/{ak}/{sk}/{token} 				Auth.auth
 *       /admin              					module:crud
 *       /                                       module:secure
 

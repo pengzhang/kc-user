@@ -11,10 +11,10 @@ Role(rol):
 
 User(bob):
     email:          bob@gmail.com
-    password:       123
+    password:       202cb962ac59075b964b07152d234b70
     fullname:       Bob
     isAdmin:        true
-    status:         true
+    status:         false
     username:       bob
     roles:
                     - rol

@@ -14,6 +14,7 @@ import com.sun.org.apache.bcel.internal.generic.NEW;
 import play.data.validation.Email;
 import play.data.validation.Required;
 import play.db.jpa.Model;
+import play.libs.Codec;
 
 @Entity
 public class User extends Model{
@@ -33,7 +34,7 @@ public class User extends Model{
 	public String address;
 	
 	@Required
-	public boolean status=true;
+	public boolean status=false;
 	
 	@Required
 	public boolean isAdmin=false;
@@ -47,7 +48,7 @@ public class User extends Model{
 	public List<Role> roles;
 	
 	public static User connect(String email, String password) {
-        return find("byEmailAndPasswordAndStatus", email, password,true).first();
+        return find("byEmailAndPasswordAndStatus", email, Codec.hexMD5(password),false).first();
     }
 	
 	public String toString(){
