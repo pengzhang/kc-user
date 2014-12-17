@@ -15,7 +15,7 @@
 
 用户-(MM)->角色-(MM)->资源
 
-附加功能
+* 附加功能
 缓存机制(未实现待系统验证后添加)
 
 
@@ -27,30 +27,30 @@
 
 `http://localhost:9000/login?return_url=app_url`
 
-添加return_url参数
+* 添加return_url参数 *
 
 app_url为跳转回的应用地址
 
-正常返回带access_token
+* 正常返回带access_token * 
 
 `http://app_url?access_token=1331kdfa324eewq1`
 
 
 ####验证用户并获取用户名
 
-方式一
+* 方式一 * 
 
 `http://localhost:9000/auth?ak=c600db79-9588-47cb-b606-17b3e35c8e2b&sk=ae580fc8-afd2-417e-b01d-406fc452bb4f&token=465a7438-7dd3-4c06-aac7-21ba282ba065`
 
-方式二
+* 方式二 * 
 
 ` http://localhost:9000/auth/c600db79-9588-47cb-b606-17b3e35c8e2b/ae580fc8-afd2-417e-b01d-406fc452bb4f/465a7438-7dd3-4c06-aac7-21ba282ba065`
 
-正常返回
+* 正常返回 * 
 
 ` {"members":{"appkey":"c600db79-9588-47cb-b606-17b3e35c8e2b","securekey":"ae580fc8-afd2-417e-b01d-406fc452bb4f","status":true,"username":"zp@qq.com"}}`
 
-错误
+* 错误 * 
 
 ` {"members":{"appkey":"c600db79-9588-47cb-b606-17b3e35c8e2b","securekey":"ae580fc8-afd2-417e-b01d-406fc452bb4f","error":"用户没有登陆","status":false}}`
 
