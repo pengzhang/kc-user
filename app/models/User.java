@@ -6,12 +6,11 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.sun.org.apache.bcel.internal.generic.NEW;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import play.data.validation.Email;
+import play.data.validation.Password;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 import play.libs.Codec;
@@ -23,6 +22,7 @@ public class User extends Model{
 	public String username;
 	
 	@Required
+	@Password
 	public String password;
 	
 	public String fullname;
@@ -39,6 +39,7 @@ public class User extends Model{
 	@Required
 	public boolean isAdmin=false;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	public Date registerDate;
 	
 	public Date lastLoginDate;

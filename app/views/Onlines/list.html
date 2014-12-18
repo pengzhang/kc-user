@@ -4,7 +4,8 @@
 <div class='row-fluid'>
     <div class='span12 box bordered-box purple-border' style='margin-bottom:0;'>
         <div class='box-header sea-blue-background'>
-            <div class='title'>&{'resource.list'}</div>
+            <div class='title'>&{'online.list'}</div>
+            #{crud.search /}
         </div>
         <div class='box-content box-no-padding'>
         #{crud.table fields:['username','accesstoken']}

@@ -1,9 +1,10 @@
 #{field 'object.' + _name}
-    <label for="${field.id}">
+    <label class='control-label' for="${field.id}">
         &{_name}
     </label>
+    <div class='controls'>
     <input id="${field.id}" class="${field.errorClass}" type="text" name="${field.name}" value="${_value?.format()}" size="10" />
     #{ifError field.name}
-        <span class="error">${field.error.raw()}</span>
+        <span class="help-inline">${field.error.raw()}</span>
     #{/ifError}
 #{/field}

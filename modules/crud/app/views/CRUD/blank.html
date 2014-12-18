@@ -6,13 +6,13 @@
     <h2 id="crudBlankTitle">&{'crud.blank.title', type.modelName}</h2>
 
     <div class="objectForm">
-    #{form action:@create(), enctype:'multipart/form-data'}
+    #{form action:@create(),class:'form form-horizontal form-striped', enctype:'multipart/form-data'}
         #{crud.form /}
-        <p class="crudButtons">
-            <input type="submit" name="_save" value="&{'crud.save', type.modelName}" />
-            <input type="submit" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
-            <input type="submit" name="_saveAndAddAnother" value="&{'crud.saveAndAddAnother', type.modelName}" />
-        </p>
+        	<div class="form-actions" style="margin-bottom: 0;">
+            <input type="submit" class="btn btn-primary btn-large" name="_save" value="&{'crud.save', type.modelName}" />
+            <input type="submit" class="btn btn-primary btn-large" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
+            <input type="submit" class="btn btn-success btn-large" name="_saveAndAddAnother" value="&{'crud.saveAndAddAnother', type.modelName}" />
+            </div>
     #{/form}
     </div>
 

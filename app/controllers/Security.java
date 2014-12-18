@@ -34,7 +34,7 @@ public class Security extends Secure.Security {
          if(url == null) {
         	 Admin.index();
          }
-         redirect(url+"?access_token"+flash.get("access_token"));
+         redirect(url+"?access_token="+flash.get("access_token"));
         
     }
 }

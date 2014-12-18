@@ -2,23 +2,29 @@
 #{set title:messages.get('crud.show.title', type.modelName) /}
 
 <div id="crudShow" class="${type.name}">
-
-    <h2 id="crudShowTitle">&{'crud.show.title', type.modelName}</h2>
-
-    <div class="objectForm">
-    #{form action:@save(object._key()), enctype:'multipart/form-data'}
-        #{crud.form /}
-        <p class="crudButtons">
-            <input type="submit" name="_save" value="&{'crud.save', type.modelName}" />
-            <input type="submit" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
-        </p>
+<div class="row-fluid">
+	<div class="span8 ">
+    <h2>&{'crud.show.title', type.modelName}</h2>
+	</div>
+	<div class="span4">
+    #{form class:'form', action:@delete(object._key())}
+        	<div class="control-group" style="margin-bottom: 0;">
+            <input type="submit" class="btn btn-danger btn-large pull-right" value="&{'crud.delete', type.modelName}" />
+            </div>
     #{/form}
     </div>
-
-    #{form @delete(object._key())}
-        <p class="crudDelete">
-            <input type="submit" value="&{'crud.delete', type.modelName}" />
-        </p>
+    </div>
+    <div class="objectForm">
+    #{form action:@save(object._key()), class:'form form-horizontal form-striped',enctype:'multipart/form-data'}
+        #{crud.form /}
+        	<div class="form-actions " style="margin-bottom: 0;">
+            <input type="submit" class="btn btn-primary btn-large" name="_save" value="&{'crud.save', type.modelName}" />
+            <input type="submit" class="btn btn-primary btn-large" name="_saveAndContinue" value="&{'crud.saveAndContinue', type.modelName}" />
+            </div>
     #{/form}
+    
+    </div>
+
+    
 
 </div>

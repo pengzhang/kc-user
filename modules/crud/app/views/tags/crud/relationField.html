@@ -1,10 +1,10 @@
 %{ pName = 'object.' + _name + '.' + play.db.Model.Manager.factoryFor(_field.property.relationType).keyName() }%
 
 #{field 'object.' + _name}
-    <label for="${field.id}">
+    <label class='control-label' for="${field.id}">
         &{_name}
     </label>
-
+	<div class='controls'>
     #{if _field.multiple}
         <input type="hidden" name="${pName}" value="" />
         <select id="${field.id}" name="${pName}" multiple="yes">
@@ -54,6 +54,6 @@
     #{/else}
 
     #{ifError field.name}
-        <span class="error">${field.error.raw()}</span>
+        <span class="help-inline">${field.error.raw()}</span>
     #{/ifError}
 #{/field}

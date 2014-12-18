@@ -1,37 +1,32 @@
 #{extends 'CRUD/layout.html' /}
 #{set title:messages.get('crud.list.title', type.name) /}
 
-<!-- <div id="crudList" class="${type.name}">
-
-    <h2 id="crudListTitle">&{'crud.list.title', type.name}</h2>
-
-    <div id="crudListSearch">
-        #{crud.search /}
-    </div>
-
-    <div id="crudListTable">
-        #{crud.table /}
-    </div>
-
-    <div id="crudListPagination">
-        #{crud.pagination /}
-    </div>
-
-    <p id="crudListAdd">
-        <a href="@{blank()}">&{'crud.add', type.modelName}</a>
-    </p>
-
-</div> -->
-
 <div class='row-fluid'>
     <div class='span12 box bordered-box purple-border' style='margin-bottom:0;'>
         <div class='box-header sea-blue-background'>
             <div class='title'>&{'user.list'}</div>
+            #{crud.search /}
         </div>
         <div class='box-content box-no-padding'>
         #{crud.table fields:['email','username','fullname','address','status','isAdmin','registerDate','lastLoginDate','roles']}
         	#{crud.custom 'email'}
         		<a href="@{Users.show(object.id)}">${object.email}</a>
+        	#{/crud.custom}
+        	#{crud.custom 'status'}
+        		#{if object.status == true}
+        		是
+        		#{/if}
+        		#{else}
+        		否
+        		#{/else}
+        	#{/crud.custom}
+        	#{crud.custom 'isAdmin'}
+        		#{if object.isAdmin == true}
+        		是
+        		#{/if}
+        		#{else}
+        		否
+        		#{/else}
         	#{/crud.custom}
         #{/crud.table}
         </div>

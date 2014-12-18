@@ -1,9 +1,9 @@
 package controllers;
 
 import java.lang.reflect.Constructor;
+import java.util.Date;
 
 import models.User;
-import controllers.CRUD.ObjectType;
 import play.data.binding.Binder;
 import play.db.Model;
 import play.exceptions.TemplateNotFoundException;
@@ -56,6 +56,7 @@ public class Users extends CRUD {
         }
         User user = (User)object;
         user.password = Codec.hexMD5(user.password);
+        user.registerDate = new Date();
         user._save();
         flash.success(play.i18n.Messages.get("crud.created", type.modelName));
         if (params.get("_save") != null) {
