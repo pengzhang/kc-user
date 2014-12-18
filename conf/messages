@@ -60,9 +60,7 @@ securekey=应用秘钥
 Onlines=在线用户
 Online=在线用户
 accesstoken=访问令牌
-appkey=应用Key
-securekey=应用秘钥
-expiretime=失效时间
+logintime=登录时间
 
 
 

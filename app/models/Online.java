@@ -11,13 +11,12 @@ public class Online extends Model{
 	
 	public String username;
 	public String accesstoken;
-//	public String appkey;
-//	public String securekey;
-//	public Date expiretime;
+	public Date logintime;
 	
-	public Online(String username, String accesstoken) {
+	public Online(String username, String accesstoken,Date logintime) {
 		this.username = username;
 		this.accesstoken = accesstoken;
+		this.logintime = logintime;
 	}
 	
 	public String toString(){

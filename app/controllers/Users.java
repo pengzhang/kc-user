@@ -13,6 +13,7 @@ import play.mvc.With;
 @Check("admin")
 @With(Secure.class)
 public class Users extends CRUD {
+	
 	public static void save(String id) throws Exception {
         ObjectType type = ObjectType.get(getControllerClass());
         notFoundIfNull(type);

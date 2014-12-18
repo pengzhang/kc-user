@@ -8,7 +8,7 @@
             #{crud.search /}
         </div>
         <div class='box-content box-no-padding'>
-        #{crud.table fields:['username','accesstoken']}
+        #{crud.table fields:['username','accesstoken','logintime']}
         	#{crud.custom 'online'}
         		<a href="@{Onlines.show(object.id)}">${object.resource}</a>
         	#{/crud.custom}
